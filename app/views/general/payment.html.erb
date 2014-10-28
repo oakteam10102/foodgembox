@@ -161,6 +161,40 @@ transition: all 0.2s;
                         <i class="fa fa-square fa-stack-2x text-primary"></i>
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </div><br/><br/>
+                                <!-- FoodGem Order Details<br/>-->
+                                <strong>Identity</strong><br>
+                                <%= "Email: #{@email}" %><br>
+                                <%= "Phone: #{@phone}" %><br>
+                                <%= "Zipcode: #{@zipcode}" %><br><br>
+                                <strong>Preferences</strong><br>
+                                <ul>
+                                <% @preferences.each do |preference| %>
+                                  <li><%= preference %></li>
+                                <% end %>
+                                </ul>
+                                <strong>Lunches</strong><br>
+                                <% if @lunches.nil? %>
+                                <em>No order</em>
+                                <% else %>
+                                  <ul>
+                                  <% @lunches.each do |lunch| %>
+                                    <li><%= lunch.capitalize %></li>
+                                  <% end %>
+                                  </ul>
+                                <% end %>
+                                <strong>Dinners</strong><br>
+                                <% if @dinners.nil? %>
+                                <em>No order</em>
+                                <% else %>
+                                  <ul>
+                                  <% @dinners.each do |dinner| %>
+                                    <li><%= dinner.capitalize %></li>
+                                  <% end %>
+                                  </ul>
+                                <% end %>
+                                <br>
+
+
                                 <!-- FoodGem Package Subscription Order<br/>-->
                                 <div class="normal">
                                 <div class="col-md-6">FoodGem Box<br/></div>
