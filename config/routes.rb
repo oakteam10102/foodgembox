@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'general#home'
 
-  get '/payment', to: 'general#payment', as: 'payment'
+  post '/payment', to: 'general#payment', as: 'payment'
 
   get '/subscribe', to: 'general#subscribe', as: 'subscribe'
 
