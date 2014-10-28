@@ -5,18 +5,11 @@
 <div class="row">
     <div class="col-md-12">
         <h2> Choose Preferences </h2>
-        <%= check_box_tag(:popular) %>
-        <%= label_tag(:popular, "Popular Track") %>
-        <%= check_box_tag(:vegetarian) %>
-        <%= label_tag(:vegetarian, "Vegetarian Track") %>
-        <%= check_box_tag(:vegan) %>
-        <%= label_tag(:vegan, "Vegan Track") %>
-        <%= check_box_tag(:meat_lovers) %>
-        <%= label_tag(:meat_lovers, "Meat Lovers") %>
-        <%= check_box_tag(:seafood) %>
-        <%= label_tag(:seafood, "Seafood Track") %>
-        <%= check_box_tag(:international) %>
-        <%= label_tag(:international, "International Track") %>
+        <% tracks = ['Popular Track', 'Vegetarian Track', 'Vegan Track', 'Meat Lovers','Seafood Track', 'International Track'] %>
+        <label>
+        <% tracks.each do |track| %>
+            <%= check_box_tag('preferences[]', track) %><%= " #{track} " %>
+        <% end %>
     </div>
 </div>
 
@@ -32,36 +25,19 @@
 <div class="row">
     <div class="col-md-12">
         <h2> Choose Day </h2>
+        <% days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'] %>
         <h3> Lunch Delivery </h3>
-        <%= check_box_tag(:lunch_mon) %>
-        <%= label_tag(:lunch_mon, "mon") %>
-        <%= check_box_tag(:lunch_tue) %>
-        <%= label_tag(:lunch_tue, "tue") %>
-        <%= check_box_tag(:lunch_wed) %>
-        <%= label_tag(:lunch_wed, "wed") %>
-        <%= check_box_tag(:lunch_thu) %>
-        <%= label_tag(:lunch_thu, "thu") %>
-        <%= check_box_tag(:lunch_fri) %>
-        <%= label_tag(:lunch_fri, "fri") %>
-        <%= check_box_tag(:lunch_mon) %>
-        <%= label_tag(:lunch_sat, "sat") %>
-        <%= check_box_tag(:lunch_sun) %>
-        <%= label_tag(:lunch_sun, "sun") %>
+        <label>
+        <% days.each do |day| %>
+            <%= check_box_tag('lunch[]', day) %><%= " #{day} " %>
+        <% end %>
+        </label>
         <h3> Dinner Delivery </h3>
-        <%= check_box_tag(:dinner_mon) %>
-        <%= label_tag(:dinner_mon, "mon") %>
-        <%= check_box_tag(:dinner_tue) %>
-        <%= label_tag(:dinner_tue, "tue") %>
-        <%= check_box_tag(:dinner_wed) %>
-        <%= label_tag(:dinner_wed, "wed") %>
-        <%= check_box_tag(:dinner_thu) %>
-        <%= label_tag(:dinner_thu, "thu") %>
-        <%= check_box_tag(:dinner_fri) %>
-        <%= label_tag(:dinner_fri, "fri") %>
-        <%= check_box_tag(:dinner_mon) %>
-        <%= label_tag(:dinner_sat, "sat") %>
-        <%= check_box_tag(:dinner_sun) %>
-        <%= label_tag(:dinner_sun, "sun") %>
+        <label>
+        <% days.each do |day| %>
+            <%= check_box_tag('dinner[]', day) %><%= " #{day} " %>
+        <% end %>
+        </label>
 
     </div>
 </div>
