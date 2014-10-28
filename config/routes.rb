@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/subscribe', to: 'general#subscribe', as: 'subscribe'
 
+  get '/subscribe_fancy', to: 'general#subscribe_fancy', as: 'subscribe_fancy'
+
   get '/video', to: 'general#video', as: 'video'
 
 

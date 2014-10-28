@@ -8,6 +8,9 @@ class GeneralController < ApplicationController
   def subscribe 
   end
 
+  def subscribe_fancy
+  end
+
   def video
   end
 end
